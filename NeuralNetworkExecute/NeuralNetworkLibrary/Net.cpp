@@ -1,5 +1,8 @@
 #include "Net.hpp"
+#include <iostream>
 
+//Number of layers 
+//{3,2,1} 3 - input layers, 2 - hidden layers, 1 -output layer
 Net::Net(const std::vector<unsigned>& topology)
 {
    unsigned numberOfLayers = topology.size();
@@ -19,7 +22,9 @@ Net::Net(const std::vector<unsigned>& topology)
          //.back() last element in the container (last layer)
          //push the constructed Neuron to Layer
          mLayers.back().push_back(Neuron());
+         std::cout << "Neuron made in layer: " << layerNumber<<"\n";
       }
+      std::cout << layerNumber << " Layer has " << mLayers.back().size()<<"\n";
    }
 }
 
