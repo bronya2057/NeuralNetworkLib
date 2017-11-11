@@ -1,5 +1,8 @@
 # Prerequisites
 *.d
+*.db
+[Dd]ebug/
+*.VC.VC.opendb
 
 # Compiled Object files
 *.slo
